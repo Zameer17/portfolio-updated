@@ -2902,6 +2902,55 @@
             object-fit: fill;
             transform: none
         }
+
+        /* =====================================================================
+           MOBILE FIXES v2: experience "+" , work tree, "Data Builder", thumbnails
+           ===================================================================== */
+
+        /* thumbnails: show the WHOLE screenshot, never crop (tablet + phone) */
+        @media (max-width: 1024px) {
+            .fr::before { display: none }
+            .fr img { object-fit: contain }
+        }
+
+        @media (max-width: 820px) {
+            /* experience accordion: number | title (wraps) | "+" pinned to the right edge */
+            .acc h4 { gap: 0; padding: 18px 0; font-size: clamp(21px, 6vw, 28px); line-height: 1.1 }
+            .acc h4 u { width: 32px; margin-right: 8px }
+            .acc h4::after { margin-left: auto; padding-left: 14px; flex: none; line-height: 1 }
+        }
+
+        @media (max-width: 760px) {
+            /* thumbnails size themselves to the image, so nothing is ever cut */
+            .fr, .rail .fr { aspect-ratio: auto; min-height: 150px; padding: 10px; display: block }
+            .fr img, .rail .fr img {
+                position: relative; left: auto; top: auto;
+                width: 100%; height: auto; display: block;
+                object-fit: contain; border-radius: 10px
+            }
+
+            /* "Data Builder": words sit together, no gap, sized to the screen */
+            .bn h2 {
+                justify-content: center; align-items: baseline; flex-wrap: wrap;
+                gap: 0 .2em; padding: 0 22px;
+                font-size: clamp(54px, calc((100vw - 44px) / 3.9), 120px)
+            }
+
+            /* work tree: tighter indents + fluid text so every label stays inside the screen */
+            .svc { --rh: 40px }
+            .svc ul ul { margin-left: 8px }
+            .svc li { padding-left: 26px }
+            .svc li:not(.root)::after { width: 20px }
+            .svc .lb {
+                gap: 10px; height: auto; min-height: var(--rh);
+                font-size: clamp(13px, 3.9vw, 16px); line-height: 1.2;
+                white-space: normal; overflow-wrap: anywhere
+            }
+            .svc .lb span { width: 28px; height: 28px; font-size: 14px }
+            .svc .grp > .lb { font-size: clamp(12px, 3.5vw, 14px) }
+            .svc .grp > .lb span, .svc .leaf > .lb span { width: 26px; height: 26px; font-size: 13px; margin-left: 1px }
+            .svc .root > .lb { font-size: 11px }
+        }
     </style>
 </head>
 
