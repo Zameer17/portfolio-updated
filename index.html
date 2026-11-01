@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="Zameer Shaikh — Data analyst, AI/ML and app developer based in Mumbai.">
-    <link rel="icon" href="assets/card.jpeg">
+    <link rel="icon" href="card.jpeg">
     <title>Zameer — Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2425,19 +2425,12 @@
         }
 
         @keyframes vcPulse {
-            70% {
-                box-shadow: 0 0 0 7px rgba(74, 222, 128, 0);
-            }
-
-            100% {
-                box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-            }
+            70% { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .visit-counter .vc-dot {
-                animation: none;
-            }
+            .visit-counter .vc-dot { animation: none; }
         }
 
         /* Mobile alignment */
@@ -2792,393 +2785,122 @@
         /* =====================================================================
            RESPONSIVE: tablet + phone (side rules, spacing and grids line up)
            ===================================================================== */
-        html {
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%
-        }
-
-        html,
-        body {
-            overflow-x: clip
-        }
-
-        img,
-        video,
-        canvas,
-        svg {
-            max-width: 100%
-        }
-
-        a,
-        button {
-            -webkit-tap-highlight-color: transparent
-        }
+        html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
+        html, body { overflow-x: clip }
+        img, video, canvas, svg { max-width: 100% }
+        a, button { -webkit-tap-highlight-color: transparent }
 
         /* ---- tablet (<= 1024px) ---- */
         @media (max-width: 1024px) {
-            main::before {
-                left: 24px;
-                right: 24px
-            }
-
-            .sec {
-                padding: 96px clamp(40px, 7vw, 72px)
-            }
-
-            .grid2 {
-                grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-                gap: 52px 28px
-            }
-
-            .steps {
-                gap: 28px
-            }
-
-            .ft {
-                padding-left: 8vw;
-                padding-right: 8vw
-            }
-
-            .ft .gn {
-                left: 8vw;
-                right: 8vw
-            }
+            main::before { left: 24px; right: 24px }
+            .sec { padding: 96px clamp(40px, 7vw, 72px) }
+            .grid2 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 52px 28px }
+            .steps { gap: 28px }
+            .ft { padding-left: 8vw; padding-right: 8vw }
+            .ft .gn { left: 8vw; right: 8vw }
         }
 
         /* ---- tablet portrait / large phones (<= 820px) ---- */
         @media (max-width: 820px) {
-            .pg {
-                justify-content: flex-start;
-                align-items: center;
-                padding: 100px clamp(32px, 7vw, 64px) 90px
-            }
-
-            .pl {
-                max-width: 640px
-            }
-
-            .pl h2 {
-                font-size: clamp(44px, 9vw, 76px)
-            }
-
-            .pl p {
-                max-width: 520px;
-                font-size: 16px
-            }
-
-            .sel {
-                left: clamp(32px, 7vw, 64px)
-            }
-
-            .bn h2 {
-                font-size: clamp(64px, 19vw, 190px)
-            }
+            .pg { justify-content: flex-start; align-items: center; padding: 100px clamp(32px, 7vw, 64px) 90px }
+            .pl { max-width: 640px }
+            .pl h2 { font-size: clamp(44px, 9vw, 76px) }
+            .pl p { max-width: 520px; font-size: 16px }
+            .sel { left: clamp(32px, 7vw, 64px) }
+            .bn h2 { font-size: clamp(64px, 19vw, 190px) }
         }
 
         /* ---- phone (<= 760px) ---- */
         @media (max-width: 760px) {
-
             /* side rules sit close to the edge; content sits a clean 14px inside them */
-            main::before {
-                left: 14px;
-                right: 14px
-            }
-
-            .sec {
-                padding: 72px 28px
-            }
-
-            .qt {
-                padding: 56px 28px
-            }
-
-            .eyebrow {
-                font-size: 11px;
-                margin-bottom: 12px
-            }
-
-            .big {
-                font-size: clamp(30px, 9vw, 44px);
-                margin-bottom: 30px
-            }
-
-            .bb {
-                font-size: clamp(40px, 13vw, 60px)
-            }
-
-            .lead {
-                font-size: 15px;
-                max-width: none;
-                margin-bottom: 26px
-            }
-
-            .qt p {
-                font-size: clamp(22px, 6.4vw, 30px)
-            }
+            main::before { left: 14px; right: 14px }
+            .sec { padding: 72px 28px }
+            .qt { padding: 56px 28px }
+            .eyebrow { font-size: 11px; margin-bottom: 12px }
+            .big { font-size: clamp(30px, 9vw, 44px); margin-bottom: 30px }
+            .bb { font-size: clamp(40px, 13vw, 60px) }
+            .lead { font-size: 15px; max-width: none; margin-bottom: 26px }
+            .qt p { font-size: clamp(22px, 6.4vw, 30px) }
 
             /* project cards */
-            .grid2 {
-                grid-template-columns: 1fr;
-                gap: 44px
-            }
-
-            .fr {
-                border-radius: 18px
-            }
-
-            .pm {
-                flex-wrap: wrap;
-                gap: 8px 14px
-            }
-
-            .pm>div:first-child {
-                flex: 1 1 60%;
-                min-width: 0
-            }
-
-            .lk {
-                gap: 12px;
-                font-size: 12.5px
-            }
-
-            .pd {
-                max-width: none;
-                font-size: 14px
-            }
-
-            .chips i,
-            .tech i {
-                font-size: 11px;
-                padding: 6px 11px
-            }
-
-            .flt {
-                margin: -8px 0 26px;
-                gap: 8px
-            }
-
-            .flt button {
-                padding: 10px 14px
-            }
-
-            .rail {
-                gap: 16px;
-                margin: 0 -28px;
-                padding: 6px 28px 24px;
-                scroll-padding-left: 28px
-            }
-
-            .rail .pc {
-                width: 80vw
-            }
-
-            .pill2 {
-                font-size: 11px;
-                padding: 10px 14px;
-                line-height: 1.5;
-                text-align: center
-            }
+            .grid2 { grid-template-columns: 1fr; gap: 44px }
+            .fr { border-radius: 18px }
+            .pm { flex-wrap: wrap; gap: 8px 14px }
+            .pm > div:first-child { flex: 1 1 60%; min-width: 0 }
+            .lk { gap: 12px; font-size: 12.5px }
+            .pd { max-width: none; font-size: 14px }
+            .chips i, .tech i { font-size: 11px; padding: 6px 11px }
+            .flt { margin: -8px 0 26px; gap: 8px }
+            .flt button { padding: 10px 14px }
+            .rail { gap: 16px; margin: 0 -28px; padding: 6px 28px 24px; scroll-padding-left: 28px }
+            .rail .pc { width: 80vw }
+            .pill2 { font-size: 11px; padding: 10px 14px; line-height: 1.5; text-align: center }
 
             /* other grids */
-            .two,
-            .ex2,
-            .steps {
-                grid-template-columns: minmax(0, 1fr);
-                gap: 36px
-            }
-
-            .two>*,
-            .ex2>* {
-                min-width: 0
-            }
-
-            .steps {
-                margin-top: 36px
-            }
-
-            .steps p {
-                max-width: none
-            }
-
-            .cg {
-                grid-template-columns: 1fr;
-                gap: 12px
-            }
-
-            .cg a {
-                padding: 20px
-            }
-
-            .stt {
-                gap: 22px 30px;
-                margin: 22px 0
-            }
-
-            .edu {
-                padding: 16px 18px
-            }
-
-            .sc a,
-            .btns a {
-                padding: 11px 16px
-            }
+            .two, .ex2, .steps { grid-template-columns: minmax(0, 1fr); gap: 36px }
+            .two > *, .ex2 > * { min-width: 0 }
+            .steps { margin-top: 36px }
+            .steps p { max-width: none }
+            .cg { grid-template-columns: 1fr; gap: 12px }
+            .cg a { padding: 20px }
+            .stt { gap: 22px 30px; margin: 22px 0 }
+            .edu { padding: 16px 18px }
+            .sc a, .btns a { padding: 11px 16px }
 
             /* photo banner */
-            .bn {
-                padding: 80px 0 64px
-            }
-
-            .bn h2 {
-                font-size: clamp(56px, 18.5vw, 110px);
-                padding: 0 22px
-            }
-
-            .bn .pt {
-                width: clamp(120px, 34vw, 170px);
-                border-radius: 18px
-            }
-
-            .bn p {
-                font-size: 11px;
-                margin-top: 28px;
-                padding: 0 28px
-            }
+            .bn { padding: 80px 0 64px }
+            .bn h2 { font-size: clamp(56px, 18.5vw, 110px); padding: 0 22px }
+            .bn .pt { width: clamp(120px, 34vw, 170px); border-radius: 18px }
+            .bn p { font-size: 11px; margin-top: 28px; padding: 0 28px }
 
             /* landing hero */
-            .pg {
-                padding: 92px 28px 84px;
-                gap: 24px
-            }
-
-            .pl h2 {
-                font-size: clamp(38px, 11.5vw, 52px)
-            }
-
-            .pl p {
-                margin: 18px 0 22px;
-                font-size: 14.5px
-            }
-
-            .stats {
-                display: grid;
-                width: 100%;
-                margin-bottom: 22px
-            }
-
-            .stats div {
-                padding: 10px 4px
-            }
-
-            .stats b {
-                font-size: 19px
-            }
-
-            .stats small {
-                font-size: 8px;
-                letter-spacing: .1em
-            }
-
-            .sel {
-                left: 28px;
-                bottom: 20px;
-                font-size: 13px
-            }
+            .pg { padding: 92px 28px 84px; gap: 24px }
+            .pl h2 { font-size: clamp(38px, 11.5vw, 52px) }
+            .pl p { margin: 18px 0 22px; font-size: 14.5px }
+            .stats { display: grid; width: 100%; margin-bottom: 22px }
+            .stats div { padding: 10px 4px }
+            .stats b { font-size: 19px }
+            .stats small { font-size: 8px; letter-spacing: .1em }
+            .sel { left: 28px; bottom: 20px; font-size: 13px }
 
             /* floating contact dock: compact, clear of the home indicator */
-            .dock {
-                bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-                gap: 8px;
-                padding: 7px 8px
-            }
-
-            .dock a {
-                width: 40px;
-                height: 40px
-            }
+            .dock { bottom: calc(12px + env(safe-area-inset-bottom, 0px)); gap: 8px; padding: 7px 8px }
+            .dock a { width: 40px; height: 40px }
 
             /* footer */
-            .ft {
-                padding: 116px 28px 38vw
-            }
-
-            .ft .gn {
-                left: 28px;
-                right: 28px
-            }
-
-            .ft h2 {
-                font-size: clamp(32px, 10vw, 44px)
-            }
-
-            .ft .cols {
-                gap: 22px;
-                margin-top: 30px
-            }
-
-            .ft .cols:not(.rv) {
-                margin-top: 0
-            }
-
-            .ft .cols.rv a {
-                font-size: 17px;
-                overflow-wrap: anywhere
-            }
-
-            .ft hr {
-                margin: 28px 0
-            }
-
-            .ft .cols:not(.rv) a {
-                min-width: 0;
-                margin-right: 18px
-            }
-
-            .ft .cols:not(.rv)>div:last-child {
-                align-self: start
-            }
-
-            .visit-counter {
-                top: 80px;
-                right: 28px;
-                font-size: 12px;
-                padding: 3px 10px 3px 8px
-            }
+            .ft { padding: 116px 28px 38vw }
+            .ft .gn { left: 28px; right: 28px }
+            .ft h2 { font-size: clamp(32px, 10vw, 44px) }
+            .ft .cols { gap: 22px; margin-top: 30px }
+            .ft .cols:not(.rv) { margin-top: 0 }
+            .ft .cols.rv a { font-size: 17px; overflow-wrap: anywhere }
+            .ft hr { margin: 28px 0 }
+            .ft .cols:not(.rv) a { min-width: 0; margin-right: 18px }
+            .ft .cols:not(.rv) > div:last-child { align-self: start }
+            .visit-counter { top: 80px; right: 28px; font-size: 12px; padding: 3px 10px 3px 8px }
         }
 
         /* ---- small phones (<= 380px) ---- */
         @media (max-width: 380px) {
+            .sec, .qt { padding-left: 24px; padding-right: 24px }
+            .rail { margin: 0 -24px; padding-left: 24px; padding-right: 24px }
+            .pg, .ft { padding-left: 24px; padding-right: 24px }
+            .sel, .ft .gn { left: 24px }
+            .ft .gn { right: 24px }
+            .stats small { font-size: 7.5px; letter-spacing: .06em }
+        }
 
-            .sec,
-            .qt {
-                padding-left: 24px;
-                padding-right: 24px
-            }
-
-            .rail {
-                margin: 0 -24px;
-                padding-left: 24px;
-                padding-right: 24px
-            }
-
-            .pg,
-            .ft {
-                padding-left: 24px;
-                padding-right: 24px
-            }
-
-            .sel,
-            .ft .gn {
-                left: 24px
-            }
-
-            .ft .gn {
-                right: 24px
-            }
-
-            .stats small {
-                font-size: 7.5px;
-                letter-spacing: .06em
-            }
+        /* navbar / quote avatar: whole face (hat to chin) centred in the circle */
+        .av2 img,
+        .nav .av2 img {
+            inset: auto;
+            position: absolute;
+            width: 113%;
+            height: auto;
+            left: -4.9%;
+            top: -18.3%;
+            object-fit: fill;
+            transform: none
         }
     </style>
 </head>
@@ -3217,22 +2939,22 @@
                         </div>
                         <div class="btns">
                             <a class="p" href="#work">View work</a>
-                            <a href="assets/Zameer_Shaikh_Resume.pdf" download>Download resume</a>
+                            <a href="Zameer_Shaikh_Resume.pdf" download>Download resume</a>
                             <a href="https://www.linkedin.com/in/zameer-shaikh-1a9482345" target="_blank"
                                 rel="noopener">Contact me</a>
                         </div>
                     </div>
                     <!-- hero cards reuse your project screenshots from the assets folder -->
                     <div class="cards">
-                        <div class="c1"><img decoding="async" src="assets/venom.jpg" alt=""
+                        <div class="c1"><img decoding="async" src="venom.jpg" alt=""
                                 onerror="this.remove()"><em>Personal
                                 LLM</em>
                         </div>
-                        <div class="c2"><img src="assets/weather.jpg" alt="" onerror="this.remove()"><em>Weather
+                        <div class="c2"><img src="weather.jpg" alt="" onerror="this.remove()"><em>Weather
                                 Analysis</em></div>
-                        <div class="c3"><img src="assets/traffic.jpg" alt="" onerror="this.remove()"><em>ML Traffic
+                        <div class="c3"><img src="traffic.jpg" alt="" onerror="this.remove()"><em>ML Traffic
                                 Predictor Model</em></div>
-                        <div class="c4"><img src="assets/todo.jpg" alt="" onerror="this.remove()"><em>Android
+                        <div class="c4"><img src="todo.jpg" alt="" onerror="this.remove()"><em>Android
                                 Application</em>
                         </div>
                     </div>
@@ -3252,7 +2974,7 @@
         <section class="qt">
             <p class="wr">“Turning raw data into <b>decisions people can act on.</b>”</p>
             <div class="rv">
-                <div class="av2">ZS<img src="assets/card.jpeg" alt="" onerror="this.remove()"></div><span>Zameer
+                <div class="av2">ZS<img src="card.jpeg" alt="" onerror="this.remove()"></div><span>Zameer
                     Shaikh<br><small>Data Analyst &amp; Developer</small></span>
             </div>
         </section>
@@ -3370,7 +3092,7 @@
 
                 <div>
                     <small>Resume</small>
-                    <a href="assets/Zameer_Shaikh_Resume.pdf" download>
+                    <a href="Zameer_Shaikh_Resume.pdf" download>
                         Download now
                     </a>
                 </div>
@@ -3451,7 +3173,7 @@
         </footer>
     </main>
     <div class="nav" id="nav">
-        <div class="av2">ZS<img src="assets/card.jpeg" alt="" onerror="this.remove()"></div><span class="nm">Zameer
+        <div class="av2">ZS<img src="card.jpeg" alt="" onerror="this.remove()"></div><span class="nm">Zameer
             Shaikh</span><span class="dts"><i></i><i></i><i></i></span>
         <div class="nl"><a href="#work">Projects</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a
                 class="ct" href="#contact">Contact</a></div>
@@ -3467,8 +3189,8 @@
             class="nx">›</button><small></small></div>
     <div class="fc" id="fc">
         <div class="fci">
-            <div class="ff"><img src="assets/card.jpeg" alt="Zameer Shaikh"></div>
-            <div class="ff bk"><img src="assets/card.jpeg" alt=""></div>
+            <div class="ff"><img src="card.jpeg" alt="Zameer Shaikh"></div>
+            <div class="ff bk"><img src="card.jpeg" alt=""></div>
         </div><span class="sig2" id="sg">Zameer</span>
     </div>
     <div class="dot" id="dot"></div>
@@ -3478,8 +3200,8 @@
             <div class="term" id="term"></div>
             <!-- ▼ PUT YOUR GIF HERE: change the src path if your file lives elsewhere -->
             <div class="shot" id="shot">
-                Add your GIF at assets/portfolio.gif
-                <img src="assets/Funny.gif" alt="Portfolio preview" onerror="this.remove()">
+                Funny.gif
+                <img src="Funny.gif" alt="Portfolio preview" onerror="this.remove()">
             </div>
             <canvas id="cv" width="1056" height="696"></canvas>
         </div>
@@ -3602,7 +3324,7 @@
     </script>
 
     <script>
-        const IM = 'assets/';   // folder holding your screenshots, photo, certificates
+        const IM = '';   // images sit in the same folder as index.html (repo root)
         const nm = (b, e, c, sep = '') => [`${b}${sep}1.${e}`];
         const LP = 'https://www.linkedin.com/posts/zameer-shaikh-1a9482345_', LD = 'https://www.linkedin.com/posts/zameer-shaikh-1841og_';
         const P = [
