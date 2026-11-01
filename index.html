@@ -2786,7 +2786,7 @@
            RESPONSIVE: tablet + phone (side rules, spacing and grids line up)
            ===================================================================== */
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100% }
-        html, body { overflow-x: clip }
+        main { overflow-x: clip }
         img, video, canvas, svg { max-width: 100% }
         a, button { -webkit-tap-highlight-color: transparent }
 
@@ -2958,6 +2958,10 @@
             position: static;
             top: auto
         }
+
+        /* laptop GIF screen: no blur/scale filter transition, GIF on its own GPU layer (stops edge tearing while zooming) */
+        .shot { filter: none; transform: none; transition: opacity 1.1s ease }
+        .shot img { will-change: transform; transform: translateZ(0); backface-visibility: hidden }
     </style>
 </head>
 
@@ -3305,7 +3309,8 @@
                 for (const ch of tx) { if (id !== run) return; const sp = document.createElement('span'); sp.className = 'c'; sp.textContent = ch; t.appendChild(sp); await sleep(kd === 'c' ? 38 : 15) }
                 await sleep(kd === 'c' ? 420 : 200)
             }
-            if (id !== run) return; const d = document.createElement('div'); d.innerHTML = PR; tl.appendChild(d); d.appendChild(cur)
+            if (id !== run) return; const d = document.createElement('div'); d.innerHTML = PR; tl.appendChild(d); d.appendChild(cur);
+            await sleep(700); if (id === run && !PHONE) dissolve()
         }
 
         function dissolve() {
@@ -3319,6 +3324,7 @@
                 }, x / W * 1000 + Math.random() * 350)
             });
             const tb = term.querySelector('.tb'); if (tb) tb.style.opacity = 0; term.querySelectorAll('.pr,.cur').forEach(e => { e.style.transition = 'opacity .6s'; e.style.opacity = 0 });
+            setTimeout(() => { const im = shot.querySelector('img'), u = im && im.getAttribute('src'); if (u && state === 2) { im.removeAttribute('src'); im.setAttribute('src', u) } }, 500);   // GIF starts from frame 1
             setTimeout(() => { if (state === 2) shot.classList.add('on') }, 1100);
             setTimeout(() => { if (state === 2) term.style.visibility = 'hidden' }, 2600)
         }
@@ -3364,9 +3370,7 @@
 
             if (PHONE) { if ((p < .46 && state !== 0) || state === 2) reset(); else if (p > .62 && state === 0) type() }
             else if (p < .46 && state !== 0) reset();
-            else if (state === 2 && p < .8) reset();
-            else if (p > .9 && state < 2) dissolve();
-            else if (p > .62 && p <= .9 && state === 0) type();
+            else if (p > .62 && state === 0) type();   // message ends -> dust -> GIF plays, however far the laptop is open
 
             if (ps.length) {
                 cx.clearRect(0, 0, W, H);
