@@ -3323,7 +3323,7 @@
                     for (let i = 0; i < 8; i++) ps.push({ x: x + Math.random() * w, y: y + h * .25 + Math.random() * h * .6, vx: 1 + Math.random() * 3.2, vy: -Math.random() * 2.4 - .2, r: 2 + Math.random() * 3, l: 1, d: .007 + Math.random() * .012, c: cols[i % 3] })
                 }, x / W * 1000 + Math.random() * 350)
             });
-            const tb = term.querySelector('.tb'); if (tb) tb.style.opacity = 0; term.querySelectorAll('.pr,.cur').forEach(e => { e.style.transition = 'opacity .6s'; e.style.opacity = 0 });
+            const tb = term.querySelector('.tb'); if (tb) tb.style.opacity = 0; term.querySelectorAll('.pr,.cur').forEach(e => { e.style.transition = 'opacity .6s'; e.style.opacity = 0; if (e.classList.contains('cur')) e.style.animation = 'none' });   // the blink animation would otherwise keep overriding opacity
             setTimeout(() => { const im = shot.querySelector('img'), u = im && im.getAttribute('src'); if (u && state === 2) { im.removeAttribute('src'); im.setAttribute('src', u) } }, 500);   // GIF starts from frame 1
             setTimeout(() => { if (state === 2) shot.classList.add('on') }, 1100);
             setTimeout(() => { if (state === 2) term.style.visibility = 'hidden' }, 2600)
